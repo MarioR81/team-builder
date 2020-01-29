@@ -14,6 +14,13 @@ const Form = props => {
         <form>
             <label htmlFor="name">Name: </label>
             <input id="name" type="text" onChange={handleChanges}/>
+            <br/>
+            <label htmlFor="name">Email: </label>
+            <input id="email" type="email" onChange={handleChanges}/>
+            <br/>
+            <label htmlFor="role">Role: </label>
+            <input id="role" type="select" onChange={handleChanges}/>
+            <br/>
             <button type="submit">Add Member</button>
         </form>
     )
