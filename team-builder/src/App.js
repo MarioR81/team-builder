@@ -4,22 +4,30 @@ import './App.css';
 
 
 function App() {
-  const [state, setState] = useState([
+  const [cards, setCards] = useState([
     {
       id: 1,
-      title: "test app.js",
-      body: "body app.js"
+      name: "name app.js",
+      role: "role app.js"
     }
   ]);
-
+const addNewCard = card => {
+  const newCard = {
+    id: Date.now(),
+    name: card.name,
+    role: card.role
+  };
+  setCards([...cards, newCard])
+}
   
   
   return (
     <div className="App">
       <p> This is the APP</p>
-      <Form />
+      <Form addNewCard={addNewCard}/>
     </div>
   );
 }
 
 export default App;
+ 
