@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Form = props => {
+    
 
     const [member, setMember] = useState({
         name: ''
@@ -9,9 +10,14 @@ const Form = props => {
         setMember({name: e.target.value})
         console.log(member);
     }
+    // const submitMember = e => {
+    //     e.preventDefault();
+    //     props.addNewMember(member);
+    // }
     return (
         
-        <form>
+        // <form onSubmit={submitMember}>
+<form>
             <label htmlFor="name">Name: </label>
             <input id="name" type="text" onChange={handleChanges}/>
             <br/>
