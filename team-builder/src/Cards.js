@@ -4,9 +4,10 @@ const Cards = props => {
     return (
         <div>
             {props.cards.map(card => (
-                <div key={card.id}>
+                <div className="card" key={card.id}>
                         <h2>{card.name}</h2>
-                        <p>{card.role}</p>
+                        <p>Email: {card.email}</p>
+                        <p>Role: {card.role}</p>
                 </div>
             ))}
         </div>
